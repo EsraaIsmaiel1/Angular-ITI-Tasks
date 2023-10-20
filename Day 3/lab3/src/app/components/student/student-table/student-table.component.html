@@ -1,0 +1,22 @@
+<div class="row mt-3">
+    <div class="col-9">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Age</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList; let i = index">
+                    <td>{{ student.studentName }}</td>
+                    <td>{{ student.age }}</td>
+                    <td>
+                        <button class="btn btn-outline-danger" (click)="removeStudent(i)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

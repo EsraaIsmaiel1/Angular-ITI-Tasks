@@ -1,0 +1,14 @@
+<app-navbar (componentChanged)="updateSelectedComponent($event)"></app-navbar>
+
+<ng-container *ngIf="componentName === 'home'">
+    <app-home></app-home>
+</ng-container>
+
+<ng-container *ngIf="componentName === 'Register'">
+    <app-register></app-register>
+</ng-container>
+
+<ng-container *ngIf="componentName === 'Products'">
+    <app-products></app-products>
+</ng-container>
+<!-- <app-student></app-student> -->

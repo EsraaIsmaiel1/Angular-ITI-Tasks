@@ -1,0 +1,47 @@
+<div class="col-12">
+    <div class="container bg-dark-subtle text-center">
+        <h1 class="p-4"> Student list</h1>
+        <form class="row g-3" (submit)="addStudent($event)">
+            <div class="col-md-4">
+                <label for="validationServer01" class="form-label">Student name</label>
+                <input type="text" class="form-control" id="validationServer01" value="" name="studentName"
+                    [(ngModel)]="studentName" [ngClass]="{
+                        'is-valid':studentNameValid,
+                        'is-invalid':!studentNameValid,
+                    }">
+            </div>
+            <div class="col-md-4">
+                <label for="validationServer02" class="form-label">Age</label>
+                <input type="number" class="form-control" id="validationServer02" value="" name="age" [(ngModel)]="age"
+                    [ngClass]="{
+                    'is-valid':studentAgeValid,
+                    'is-invalid':!studentAgeValid
+                    }">
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-9">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList; let i =index">
+                    <td>{{ student.studentName }}</td>
+                    <td>{{ student.age }}</td>
+                    <button class="btn btn-outline-danger" (click)="removeStudent(i)">
+                        Remove
+                    </button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

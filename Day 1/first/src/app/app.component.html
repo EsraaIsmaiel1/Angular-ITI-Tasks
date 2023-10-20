@@ -1,0 +1,15 @@
+<app-nav></app-nav>
+<app-slider></app-slider>
+<app-products></app-products>
+<div class="row " style="display: flex; justify-content: center;">
+    <div class="col-4">
+        <div class="input-group m-4 p-4">
+            <input type="text" class="form-control" placeholder="Enter your email address"
+                aria-label="Recipient's username" aria-describedby="button-addon2" #emailInput>
+            <button (click)="getValue(emailInput.value)" class="btn btn-outline-secondary" type="button"
+                id="button-addon2">Sign UP</button>
+        </div>
+        <p class="input-group m-4 p-4">{{ outputValue }}</p>
+    </div>
+</div>
+<app-footer></app-footer>

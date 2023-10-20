@@ -1,0 +1,26 @@
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let product of products">
+                <div class="card shadow-sm">
+                    <img src={{product.img1}} class="bd-placeholder-img card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.productName}}</h5>
+                        <p class="card-text"> Price: {{product.price}} $</p>
+                        <p class="card-text"> Q: {{product.quantity}} </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button [routerLink]="['/products', product.id]" type="button"
+                                    class="btn btn-sm btn-outline-info">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-success"
+                                    [routerLink]="['/products', product.id ,'edit']">Edit</button>
+                                <button type="button" class="btn btn-sm btn-outline-danger"
+                                    (click)="deleteProduct(product.id)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="col-12">
+    <div class="container bg-dark-subtle text-center">
+        <h1 class="p-4"> Student list</h1>
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="validationServer01" class="form-label">Student name</label>
+                <input type="text" class="form-control" id="validationServer01" name="studentName" #studentNameInput>
+            </div>
+            <div class="col-md-4">
+                <label for="validationServer02" class="form-label">Age</label>
+                <input type="number" class="form-control" id="validationServer02" name="age" #ageInput>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" (click)="addStudent($event, studentNameInput.value, ageInput.value)">Add
+                    Student</button>
+            </div>
+        </form>
+    </div>
+</div>
+<app-student-table [studentList]="studentList"></app-student-table>

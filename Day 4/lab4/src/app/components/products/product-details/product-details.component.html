@@ -1,0 +1,26 @@
+<div class="container ">
+    <div class="product ">
+        <div class="product-photo" [ngClass]="{'apply-styles': applyStyles}">
+            <img src="{{ product.img1 }}">
+            <img src="{{ product.img2 }}">
+        </div>
+        <div class="product-detail p-4 m-4">
+            <h1 class="product__title text-info">{{product.productName}}</h1>
+
+            <div class="product__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, nostrum
+                corrupti iste labore, autem dolorem et minus, ex nemo aliquid ut nobis sunt a repudiandae ipsum corporis
+                fuga? Illo, minus.</div>
+            <h1 class="product__price"> Price :{{product.price}} </h1>
+            <h1 class="product__price"> Quantity :{{product.quantity}} </h1>
+
+            <a class=" btn btn-outline-info text-dark" href="#">
+                <span>Add to cart</span>
+            </a>
+            <div class="p-5">
+                <button class="btn btn-outline-info text-dark" [routerLink]="'/products'" type="submit">
+                    Back to Products
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

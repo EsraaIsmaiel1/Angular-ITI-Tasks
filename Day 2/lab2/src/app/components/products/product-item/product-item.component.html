@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+    <img src="assets/img/1.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{product?.productName}}</h5>
+        <ng-container [ngSwitch]="product?.quantity">
+            <p *ngSwitchCase="0" class="card-text">No Products Avail</p>
+            <p *ngSwitchCase="1" class="card-text">Only One Product Available</p>
+            <p *ngSwitchDefault class="card-text">{{product?.quantity}}</p>
+        </ng-container>
+        <button>Buy Now</button>
+
+    </div>
+</div>
